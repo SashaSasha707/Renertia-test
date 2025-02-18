@@ -48,7 +48,7 @@ body {
 
     text-align: left;
 
-    padding-top: 100px; /* Щоб контент не ховався під хедером */
+    padding-top: 100px;
 
 }
 
@@ -125,7 +125,7 @@ a {
     gap: 48px;
 
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     text-transform: titlecase;
     color: var(--black-color);
 
@@ -138,8 +138,6 @@ a {
     gap: 36px;
 
     color: var(--black-color);
-
-    font-size: 20px
 }
 
 .btn-header {
@@ -162,7 +160,7 @@ a {
 .btn-header:hover,
 .btn-header:focus{
     background: var(--secondary-color);
-}
+} 
 
 .hero {
     margin-top: 64px;
@@ -223,7 +221,6 @@ a {
     align-items: center;
 
     margin-top: 36px;
-    width: 1170px;
 }
 
 .hero-list {
@@ -671,4 +668,25 @@ a {
     justify-content: center;
     gap: 8px;
     margin-bottom: 64px;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
