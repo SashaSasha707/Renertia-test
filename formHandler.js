@@ -1,4 +1,11 @@
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
+
+
 document.addEventListener("DOMContentLoaded", function () {
+  
+
     document.getElementById("contactForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
 
