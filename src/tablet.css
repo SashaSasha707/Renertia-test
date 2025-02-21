@@ -5,14 +5,16 @@
     .works,
     .getintouch          
  {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 36px;
+    padding-bottom: 36px;
  }
 
  body {
     padding-top: 24px;
 
 }
+
+
     .container {
         width: 768px;
         padding: 0 16px;
@@ -21,23 +23,23 @@
         text-align: center;
     }
 
+
     .ul-header{
         font-family: sans-serif;
         font-style: 16px;
+        gap: 24px;
     }
     
     .nav-header {
         width: 736px;
-        height: 64px;
-
+        height: 80px;
         border-radius: 16px;
-     
         position: fixed;
-         top: 0;
-         background: var(--back-color);
-         z-index: 1000;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         padding: 10px 0;
+        top: 0;
+        background: var(--back-color);
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 0;
      }
      
      .logo {
@@ -54,31 +56,44 @@
          display: flex;
          justify-content: space-between;
          align-items: center;
-         gap: 16px;
+         gap: 24px;
      
          font-family: sans-serif;
          font-size: 16px;
          text-transform: titlecase;
          color: var(--black-color);
+         padding: 0;
+
+         .btn-header{
+            width: 200px;
+         }
      }
      
      
      .btn-header {
          display: inline-block;
-         border-radius: 200px;
-         width: 180px;
-         height: 36px;
+         border-radius: 16px;
+         width: 240px;
+         height: 48px;
          font-size: 14px;
+         margin-right: 16px;
+        a{
+            color: var(--white-color);
+        } 
      } 
         
-
+     
+     main {
+        padding-top: 36px;
+    }
+    
     .hero-container {
         flex-direction: column;
         align-items: center;
     }
 
     .hero-content {
-        border-radius: 30px;
+        border-radius: 16px;
         width: 736px;
         height: 320px;
     
@@ -92,17 +107,17 @@
     }
 
     .hero-text {
-        border-radius: 24px;
+        border-radius: 16px;
     
         width: 488px;
-        height: 136px;
+        height: 112px;
         font-size: 24px;
         font-weight: 200;
     }
 
     .hero-info{
         margin-top: 24px;
-        gap: 24px;
+        gap: 16px;
     }
 
     .hero-li {
@@ -110,7 +125,7 @@
         border-radius: 16px;
     
         width: 224px;
-        height: 56px;
+        height: 48px;
     
         font-size: 16px;    
     }
@@ -122,6 +137,12 @@
 
     .hero-list {
         gap: 24px;
+
+        button{
+            width: 100%;
+            padding: 0;
+            height: 48px;
+        }
     }
 
     .section-title {
@@ -158,6 +179,11 @@
         font-family: sans-serif;
         color: var(--black-color);
         text-align: justify;
+    }
+
+   .whoweare-text {
+        margin-top: 36px;
+        font-size: 16px;
     }
 
     .offer-content {
@@ -213,7 +239,7 @@
         font-size: 24px;
         width: 736px;
         height: 120px;
-        border-radius: 30px;
+        border-radius: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -250,7 +276,7 @@
         height: auto;
         padding-top: 36px;
         padding-bottom: 36px;
-        border-radius: 24px;
+        border-radius: 16px;
     }
 
     .getintouch-text {
@@ -314,8 +340,8 @@
     .footer-content{
         width: 736px;
         height: auto;
-        border-top-left-radius: 24px;
-        border-top-right-radius: 24px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
         text-align: center;
         color: var(--white-color);
         padding-bottom: 0;
@@ -336,7 +362,7 @@
     
     .btn-footer{
         display: inline-block;
-        border-radius: 250px;
+        border-radius: 16px;
         width: 248px;
         height: 48px;
     

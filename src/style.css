@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
    
+html {
+    scroll-behavior: smooth;
+}
+
    /*скидаємо розмітку для основних такстових елементів*/
 h1,
 h2,
@@ -50,6 +54,11 @@ body {
 
     padding-top: 100px;
 
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
 }
 
 .list{
@@ -69,12 +78,12 @@ a {
 }
 
 .container {
-    width: 1170px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
+
 
 .whoweare,
 .offer,
@@ -82,8 +91,8 @@ a {
 .getintouch,
 .footer
  {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
  }
 
  .required::after {
@@ -91,21 +100,38 @@ a {
     color: red;
  }
 
+ .nav-header, .container {
+    box-sizing: border-box;
+}
+.mob-menu,
+.burger-btn {
+        display: none;
+    } 
+
 .nav-header {
     display: flex;
    justify-content: space-between;
-   width: 1170px;
-   height: 80px;
-   border-radius: 30px;
-   align-items: center;
-   background-color: var(--back-color);
+    align-items: center;
+    
 
-   position: fixed;
+    width: 100%;
+    max-width: 1170px; /* Робимо таку саму ширину, як у контенту */
+    
+    box-sizing: border-box;
+    height: 80px;
+    border-radius: 16px;
+    align-items: center;
+    background-color: var(--back-color);
+    padding: 10px 20px;
+    margin: 0 auto;
+
+    position: fixed;
     top: 0;
     background: var(--back-color);
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
+
 }
 
 .logo {
@@ -140,27 +166,50 @@ a {
     color: var(--black-color);
 }
 
+.li-header:hover,
+.li-header:focus{
+    text-decoration: underline;
+    text-decoration-color: var(--brand-color);
+}
+
 .btn-header {
     display: inline-block;
-    border-radius: 250px;
+    border-radius: 16px;
     width: 248px;
     height: 48px;
     
     color: var(--white-color);
     font-family: sans-serif;
     font-size: 16px;
-    text-transform: titlecase;
+    text-transform: uppercase;
     cursor: pointer;
     border-color: transparent;
     border: none;
     background-color: var(--brand-color);
     transition: background-color var(--transition); 
+
+    a{
+        color: var(--white-color);
+    }
 } 
 
 .btn-header:hover,
 .btn-header:focus{
     background: var(--secondary-color);
 } 
+
+.menu {
+    display: none;
+}
+
+.mob-hero {
+    display: none;
+}
+
+main {
+    padding-top: 100px;
+}
+
 
 .hero {
     margin-top: 64px;
@@ -171,7 +220,7 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 50px;
+    border-radius: 16px;
 
     width: 1170px;
     height: 478px;
@@ -198,10 +247,10 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 40px;
+    border-radius: 16px;
 
     width: 848px;
-    height: 188px;
+    height: 136px;
 
     font-size: 36px;
     font-family: sans-serif;
@@ -228,14 +277,19 @@ a {
     justify-content: center;
     flex-direction: column;
     gap: 36px;
+
+    button{
+        width: 100%;
+        height: 56px;
+    }
 }
 
 .hero-li {
     border: var(--brand-color) 3px solid;
-    border-radius: 24px;
+    border-radius: 16px;
 
     width: 320px;
-    height: 76px;
+    height: 56px;
 
     font-size: 20px;
     font-family: sans-serif;
@@ -258,7 +312,7 @@ a {
     width: 1170px;
     height: 92px;
     background-color: var(--back-color);
-    border-radius: 30px;
+    border-radius: 16px;
 
     display: flex;
     justify-content: center;
@@ -286,7 +340,7 @@ a {
 .responsive-img {
     width: 576px;
     height: 358px;
-    border-radius: 30px;
+    border-radius: 16px;
 }
 
 .whoweare-list{
@@ -301,6 +355,14 @@ a {
     font-family: sans-serif;
     color: var(--black-color);
     text-align: justify;
+}
+
+.whoweare-text {
+    margin-top: 64px;
+    font-size: 24px;
+    color: var(--black-color);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .offer-content {
@@ -326,7 +388,7 @@ a {
     align-items: center;
 
     border: var(--brand-color) 3px solid;
-    border-radius: 36px;
+    border-radius: 16px;
 }
 
 .offer-text {
@@ -365,7 +427,7 @@ a {
 
     width: 600px;
     height: 188px;
-    border-radius: 30px;
+    border-radius: 16px;
 }
 
 .text2{
@@ -416,7 +478,7 @@ a {
 
     width: 1170px;
     height: 188px;
-    border-radius: 30px;
+    border-radius: 16px;
     color: var(--white-color);
 }
 .getintouch-container {
@@ -426,7 +488,7 @@ a {
     background-color: var(--back-color);
     padding-top: 64px;
     padding-bottom: 64px;
-    border-radius: 40px;
+    border-radius: 16px;
 
 }
 .getintouch-text {
@@ -587,6 +649,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 16px;
+
 }
 
 .footer{
@@ -603,8 +667,8 @@ a {
     margin-right: auto;
     margin-left: auto;
     background-color: var(--brand-color);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
     text-align: center;
     color: var(--white-color);
 }
@@ -627,9 +691,15 @@ a {
     color: var(--white-color);
 }
 
+.footer-links li:hover,
+.footer-links li:focus{
+    text-decoration: underline;
+    text-decoration-color: var(--white-color);
+}
+
 .btn-footer{
     display: inline-block;
-    border-radius: 250px;
+    border-radius: 16px;
     width: 248px;
     height: 48px;
 
@@ -638,7 +708,7 @@ a {
     color: var(--brand-color);
     font-family: sans-serif;
     font-size: 16px;
-    text-transform: titlecase;
+    text-transform: uppercase;
     cursor: pointer;
     border-color: transparent;
     border: none;
@@ -646,11 +716,18 @@ a {
     transition: background-color var(--transition) color var(--transition)
 }
 
+.btn-footer a{
+    color: var(--brand-color);
+}
+
 
 .btn-footer:hover,
     .btn-footer:focus{
         background: var(--secondary-color);
         color: var(--white-color);
+        a {
+            color: var(--white-color);
+        }
     }
 
 

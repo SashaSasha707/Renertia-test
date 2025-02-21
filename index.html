@@ -7,11 +7,7 @@
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">    
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+        <<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="./src/style.css">
         <link rel="stylesheet" href="./src/tablet.css">
@@ -22,24 +18,35 @@
     <header class="header">
         <div class="container">
             <nav class="nav-header">
-                <a class="logo" href=""> Renertia </a>
+                <a class="logo" href="#"> Renertia </a>
                 <div class="nav-links burger-menu hidden2">
                     <ul class="list ul-header">
-                        <li class="li-header"><a class="link link-header" href="">Who we are</a></li>
-                        <li class="li-header"><a class="link link-header" href="">How it works</a></li>
-                        <li class="li-header"><a class="link link-header" href="">What we offer</a></li>
+                        <li class="li-header"><a class="link link-header" href="#whoweare">Who we are</a></li>
+                        <li class="li-header"><a class="link link-header" href="#offer">What we offer</a></li>
+                        <li class="li-header"><a class="link link-header" href="#works">How it works</a></li>
                     </ul>
-                    <button class="btn btn-header">Submit Your Project </button>
+                    <button class="btn btn-header">
+                        <a href="#getintouch">Submit Your Project</a>
+                    </button>
                 </div>
 
-                <div class="menu-murger is-hidden">
-                    <div class="container">
-                        <div class="menu-murger-content">
-                            <button type="button" class="menu-murger-close">
-                                <img src="./src/img/burger.jpg" alt="menu" width="16" height="16">
-                            </button>
-                </div>
-                
+            <div class="burger-btn" onclick="toggleMenu()">
+                <img src="./src/img/burger.png" alt="burger" class="burger" width="32" height="32">
+            </div>
+
+            <div class="menu mob-menu" id="menu">
+                <button class="close-btn" onclick="toggleMenu()">✖</button>
+                <ul class="menu-list">
+                    <li><a href="#whoweare">Who we are</a></li>
+                    <li><a href="#offer">What we offer</a></li>
+                    <li><a href="#works">How it works</a></li>
+                    <li> <button class="btn btn-header">
+                            <a href="#getintouch">Submit Your Project</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
                 
             </nav>
         </div>
@@ -50,35 +57,60 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title">Renertia</h1>
-                    <button class="btn btn-header">Submit Your Project </button>
+                    <button class="btn btn-header"><a href="#getintouch">Submit Your Project</a></button>
                 </div>
                 <div class="hero-info">
                     <p class="hero-text">Precision Electrical Solar Design, Delivered Fast </p>
                     <ul class=" list hero-list">
-                        <li class="hero-li">
-                            <img src="./src/img/call-header.jpg" alt="icon" class="hero-icon" width="32">
-                            <a class="link" href="tel: +15597251753"> Call us:  +1 559 725 1753 </a>
+                        <li class="">
+                            <button class="btn btn-header mob-btn">
+                                <a href="https://calendly.com/renertiaco-info/30min" target="_blank" rel="noopener noreferrer">Request Consultation</a>
+                            </button>
                         </li>
 
                         <li class="hero-li">
-                            <img src="./src/img/location-header.jpg" alt="icon" class="hero-icon" width="32">
+                            <img src="./src/img/location-header.jpg" alt="location" class="hero-icon" width="32">
                             <p>Based in Atlanta, GA</p>
                         </li>
 
                     </ul>
 
                 </div>
+
+                <div class="mob-hero">
+                    <DIV class="mob-hero-content">
+                        <h1 class="mob-hero-title">Renertia</h1>
+                        <p class="mob-hero-text">Precision Electrical Solar Design, Delivered Fast </p>
+                    </DIV>
+                    
+
+                    <div>
+                        <ul class="list mob-hero-list">
+                            <li class="">
+                                <button class="btn btn-header mob-btn">
+                                    <a href="https://calendly.com/renertiaco-info/30min" target="_blank" rel="noopener noreferrer">Request Consultation</a>
+                                </button>
+                            </li>
+
+                            <li class="hero-li">
+                                <img src="./src/img/location-header.jpg" alt="location" class="hero-icon" width="32">
+                                <p>Based in Atlanta, GA</p>
+                            </li>
+                                
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="whoweare">
+        <section class="whoweare" id="whoweare">
             <div class="container">
                 <h2 class="section-title">Who We Are?</h2>
                 <div class="whoweare-content">
                     <img src="./src/img/4.png" alt="Who We Are?" class="responsive-img block1">
                     <ul class="whoweare-list block2">
                         <li>
-                            <p>We are a Georgia-based technology company dedicated to helping solar designers achieve success in their work.</p>
+                            <p>We are a licensed electrical engineering consulting firm dedicated to providing expert guidance and design plan sets to help solar installers achieve success.</p>
                         </li>
                         <li>
                             <p>Our mission is to build strong, reliable, and long-lasting partnerships by delivering exceptional service and personalized solutions. </p>
@@ -88,23 +120,24 @@
                         </li>
                     </ul>
                 </div>
+                <p class="whoweare-text">We partner with structural firms—contact us for structural engineering stamped designs</p>
             </div>
         </section>
 
-        <section class="offer">
+        <section class="offer" id="offer">
             <div class="container">
                 <h2 class="section-title">What We offer? </h2>
                 <ul class="offer-content">
                     <li class="offer-list offer-list-tablet">
                         <img src="./src/img/time.jpg" alt="time" class="offer-img" width="180">
                         <p class="offer-text">
-                            We deliver premium-quality solar panel plansets with a guaranteed 72-hour turnaround time, ensuring speed and reliability. 
+                            We deliver premium quality solar design engineering with a guaranteed 72-hour turnaround time, ensuring speed and reliability. 
                         </p>
                     </li>
                     <li class="offer-list">
                         <img src="./src/img/services.jpg" alt="services" class="offer-img" width="180">
                         <p class="offer-text">
-                            Our service is crafted to simplify the workflow for solar designers, making their process smoother and more efficient.  
+                            Our service is crafted to simplify the workflow for Developers, EPCs, and project owners, making their process smoother and more efficient.  
                         </p>
                     </li>
                     <li class="offer-list">
@@ -117,7 +150,7 @@
             </div>
         </section>
 
-        <section class="works">
+        <section class="works" id="works">
             <div class="container">
                 <h2 class="section-title">how it works?</h2>
                 <ul class=" list works-list">
@@ -130,90 +163,76 @@
                     </li>
                     <li class="works-list-item2">
                         <img src="./src/img/Arrow 1.jpg" alt="arrow" class="arrow2">
-                        <p class="text2">creating your design solar panel plansets</p>
+                        <p class="text2">our experts create comprehensive renewable system desig</p>
                     </li>   
                     <li class="arrow">
                         <img src="./src/img/ArrowTablet.png" alt="arrow" class="visually-hidden arrow">
                     </li>
                     <li class="works-list-item3"> 
-                        <p class="text3"> getting a ready design in 72 hours</p>
+                        <p class="text3"> get your stamped design in 72 hours</p>
                     </li>      
                                 
                 </ul>
             </div>
         </section>
 
-        <section class="getintouch">
+        <section class="getintouch" id="getintouch">
             <div class=" container">
                 <div class="getintouch-container">
                     <h2 class="section-title getintouch-title">Get in touch with renertia</h2>
                     <p class="getintouch-text">Send your project now to create a solar panel plansets</p>
                     <p class="getintouch-remind">Please ensure all (*) fields are completed.</p>
     
-                    <form action="" class="form" id="contactForm">
+                    <form action="send_email.php" method="post" enctype="multipart/form-data" class="form" id="contactForm">
                         <div class="form-inputs-name">
                             <div class="form-inputs">
-                                <p class="form-inputs-title required">
-                                    First name
-                                </p>
-                                <input type="text"  id="firstName" class="input" placeholder="First name" onfocus="this.placeholder=''" onblur="this.placeholder='First name'" required>
+                                <p class="form-inputs-title required">First name</p>
+                                <input type="text" name="firstName" class="input" placeholder="First name" required>
                             </div>
                             
                             <div class="form-inputs">
-                                <p class="form-inputs-title required">
-                                    Last name
-                                </p>
-                                <input type="text" id="lastName" class="input" placeholder="Last name" onfocus="this.placeholder=''" onblur="this.placeholder='Last name'" required>
+                                <p class="form-inputs-title required">Last name</p>
+                                <input type="text" name="lastName" class="input" placeholder="Last name" required>
                             </div>
-                            
                         </div>
                         
-                        <div>
-                            <div class="form-inputs-contact">
-                                <div class="form-inputs">
-                                    <p class="form-inputs-title required">
-                                        Email
-                                    </p>
-                                    <input type="email" id="email" class="input" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>
-                                </div>
-
-                                <div class="form-inputs">
-                                    <p class="form-inputs-title required">
-                                        Phone number
-                                    </p>
-                                    <input type="text" id="phone" class="input" placeholder="Phone" onfocus="this.placeholder=''" onblur="this.placeholder='Phone'" required>
-                                </div>
-
-                                <div class="form-inputs">
-                                    <p class="form-inputs-title required">
-                                        State
-                                    </p>
-                                    <input type="text" id="phone" class="input" placeholder="State" onfocus="this.placeholder=''" onblur="this.placeholder='State'">
-                                </div>
-                               
+                        <div class="form-inputs-contact">
+                            <div class="form-inputs">
+                                <p class="form-inputs-title required">Email</p>
+                                <input type="email" name="email" class="input" placeholder="Email" required>
                             </div>
-
+                
+                            <div class="form-inputs">
+                                <p class="form-inputs-title required">Phone number</p>
+                                <input type="text" name="phone" class="input" placeholder="Phone" required>
+                            </div>
+                
+                            <div class="form-inputs">
+                                <p class="form-inputs-title">State</p>
+                                <input type="text" name="state" class="input" placeholder="State">
+                            </div>
+                        </div>
+                
                         <div class="form-inputs-file">
                             <div class="form-inputs-select form-inputs">
-                                <p class="form-inputs-title required">
-                                    File
-                                </p>
-                                <input type="file" id="fileInput" class="input inpit-file" placeholder="Project file, PDF or XLS" onfocus="this.placeholder=''" onblur="this.placeholder='Project file, PDF or XLS'" required>    
+                                <p class="form-inputs-title required">File</p>
+                                <input type="file" name="file" class="input inpit-file" required>
                             </div>
-                            <!-- <button class="btn btn-header">Select file</button> -->
                         </div>
                             
                         <div class="form-inputs form-inputs-message">
-                            <p class="form-inputs-title required">
-                                Message
-                            </p>
-                            <textarea class="textarea" placeholder="Type here" onfocus="this.placeholder=''" onblur="this.placeholder='Type here'"></textarea>
+                            <p class="form-inputs-title required">Message</p>
+                            <textarea name="message" class="textarea" placeholder="Type here"></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-header btn-form">Submit Your Project</button>
-                        <p id="responseMessage" style="display:none; color: green; margin-top: 10px;"></p>
-                        </div>
                     </form>
+                
+                    <!-- Success Message -->
+                    <p id="responseMessage" style="display:none; color: green; margin-top: 10px;"></p>
+                
+                    
+                    
                 </div> 
             </div>
         </section>
@@ -223,11 +242,13 @@
             <div class="footer-content">
                 <p class="footer-title">renertia</p>
                 <ul class="footer-links list">
-                    <li><a href="#">Who we are</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">What we offer</a></li>
+                    <li><a href="#whoweare">Who we are</a></li>
+                    <li><a href="#offer">What we offer</a></li>
+                    <li><a href="#works">How it works</a></li>
                 </ul>
-                <button class="btn btn-footer">Submit Your Project </button>
+                <button class="btn btn-footer">                        
+                    <a href="#getintouch">Submit Your Project</a>
+                </button>
                 <ul class="list footer-contact">
                     <li class="footer-contact-list">
                         <img src="./src/img/call-footer.png" alt="call" class="offer-img footer-img" width="24">
@@ -242,5 +263,7 @@
         </div>
     </footer>
     <script src="./script.js"></script>
+    <script src="formHandler.js"></script>
+
 </body>
 </html>
