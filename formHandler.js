@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let formData = new FormData(this);
 
-        fetch("send_email.php", {
+        fetch("./send_email.php", {
             method: "POST",
             body: formData
         })
