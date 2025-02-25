@@ -1,39 +1,45 @@
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  
+    const form = document.getElementById("contactForm");
+    if (!form) {
+        console.error("Form #contactForm not found.");
+        return;
+    }
 
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        let formData = new FormData(this);
+        let formData = new FormData(form);
 
-        fetch("./send_email.php", {
+        fetch("send_email.php", {
             method: "POST",
             body: formData
         })
-        .then(response => response.text()) // Get response as text
+        .then(response => response.text())
         .then(data => {
-            console.log("Server response:", data); // Log server response for debugging
+            console.log("Server response:", data);
+
+            const responseMessage = document.getElementById("responseMessage");
+            if (!responseMessage) return;
 
             if (data.trim() === "success") {
-                document.getElementById("responseMessage").textContent = "Thank you, your message has been sent!";
-                document.getElementById("responseMessage").style.color = "green";
-                document.getElementById("responseMessage").style.display = "block";
-                document.getElementById("contactForm").reset(); // Reset form after successful submission
+                responseMessage.textContent = "Thank you, your message has been sent!";
+                responseMessage.style.color = "green";
+                responseMessage.style.display = "block";
+                form.reset();
             } else {
-                document.getElementById("responseMessage").textContent = "Error: " + data;
-                document.getElementById("responseMessage").style.color = "red";
-                document.getElementById("responseMessage").style.display = "block";
+                responseMessage.textContent = "Error sending message. Please try again.";
+                responseMessage.style.color = "red";
+                responseMessage.style.display = "block";
             }
         })
         .catch(error => {
-            document.getElementById("responseMessage").textContent = "Error sending message. Please try again.";
-            document.getElementById("responseMessage").style.color = "red";
-            document.getElementById("responseMessage").style.display = "block";
+            console.error("Error:", error);
+            const responseMessage = document.getElementById("responseMessage");
+            if (responseMessage) {
+                responseMessage.textContent = "An error occurred. Please try again later.";
+                responseMessage.style.color = "red";
+                responseMessage.style.display = "block";
+            }
         });
     });
 });
