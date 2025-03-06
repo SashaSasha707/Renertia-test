@@ -216,7 +216,7 @@ main {
 }
 
 .hero-content {
-    background-image: url("./img/5.png");
+    background-image: url("../img/5.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -243,7 +243,7 @@ main {
 }
 
 .hero-text {
-    background-image: url("./img/2.png");
+    background-image: url("../img/2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -418,7 +418,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    background-image: url("./img/8.jpg");
+    background-image: url("../img/8.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -431,7 +431,7 @@ main {
 }
 
 .text2{
-    background-image: url("./img/9.jpg");
+    background-image: url("../img/9.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -464,7 +464,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    background-image: url("./img/3.png");
+    background-image: url("../img/3.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
