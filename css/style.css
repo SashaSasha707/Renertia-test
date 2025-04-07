@@ -175,12 +175,13 @@ a {
 .btn-header {
     display: inline-block;
     border-radius: 16px;
-    width: 248px;
+    width: 256px;
     height: 48px;
     
     color: var(--white-color);
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 200;
     text-transform: uppercase;
     cursor: pointer;
     border-color: transparent;
@@ -282,6 +283,11 @@ main {
         width: 100%;
         height: 56px;
     }
+
+    p {
+        border-color: var(--brand-color);
+        text-transform: uppercase
+    };
 }
 
 .hero-li {
@@ -707,13 +713,15 @@ main {
         
     color: var(--brand-color);
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 200;
     text-transform: uppercase;
     cursor: pointer;
     border-color: transparent;
     border: none;
     background-color: var(--back-color);
-    transition: background-color var(--transition) color var(--transition)
+    transition: background-color var(--transition) color var(--transition);
+    transition: background-color var(--transition); 
 }
 
 .btn-footer a{
